@@ -175,3 +175,19 @@ button:hover,
 	column-width: 20rem;
 	gap: 3rem;
 }
+
+@media (width > 48rem) {
+	.float-left {
+		width: auto;
+		float: left;
+		margin-right: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.float-right {
+		width: auto;
+		float: right;
+		margin-left: 3rem;
+		margin-bottom: 1.5rem;
+	}
+}

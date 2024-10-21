@@ -1,6 +1,6 @@
 <form>
-	<div class="flow">
-		<div class="form-group">
+	<div class="form-wrapper">
+		<div class="form-item">
 			<label for="first">First Name <span>*</span></label>
 			<input
 				type="first"
@@ -11,7 +11,7 @@
 			/>
 		</div>
 
-		<div class="form-group">
+		<div class="form-item">
 			<label for="last">Last Name <span>*</span></label>
 			<input
 				type="last"
@@ -22,7 +22,7 @@
 			/>
 		</div>
 
-		<div class="form-group">
+		<div class="form-item">
 			<label for="email">Email <span>*</span></label>
 			<input
 				type="email"
@@ -33,14 +33,20 @@
 			/>
 		</div>
 
-		<div class="form-group">
+		<div class="form-item">
 			<label for="tel">Phone (Optional)</label>
 			<input type="tel" id="tel" name="tel" placeholder="Enter phone number..." />
 		</div>
 
-		<div class="form-group">
+		<div class="form-item col-span-2">
 			<label for="message">Message <span>*</span></label>
-			<textarea name="message" id="message" rows="10" required></textarea>
+			<textarea
+				name="message"
+				id="message"
+				rows="10"
+				placeholder="Enter your message..."
+				required
+			></textarea>
 		</div>
 
 		<button type="submit" class="bg-blue white">Submit Message</button>
@@ -48,11 +54,22 @@
 </form>
 
 <style>
-	form {
-		max-width: 32rem;
+	.form-wrapper {
+		display: grid;
+		gap: 1.5rem;
 	}
 
-	.form-group {
+	@media (width > 40rem) {
+		.form-wrapper {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.col-span-2 {
+			grid-column: span 2;
+		}
+	}
+
+	.form-item {
 		display: grid;
 	}
 
@@ -66,8 +83,13 @@
 
 	input,
 	textarea {
+		min-width: 0;
 		padding: 1rem;
 		font: inherit;
+	}
+
+	button {
+		justify-self: start;
 	}
 
 	button:hover {

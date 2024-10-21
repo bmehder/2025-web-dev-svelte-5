@@ -13,7 +13,15 @@
 	<div class="outer">
 		<div class="inner flow">
 			<h2>Send us a message</h2>
-			<Form />
+			<div class="form-container">
+				<Form />
+			</div>
 		</div>
 	</div>
 </section>
+
+<style>
+	.form-container {
+		max-width: 48rem;
+	}
+</style>

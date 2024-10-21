@@ -4,6 +4,14 @@
 	import Hero from '../lib/Hero.svelte'
 </script>
 
+<svelte:head>
+	<title>Home - Articles about Stuff - Acme Website</title>
+	<meta
+		name="description"
+		content="The Acme Website is the home of so many great things. ..."
+	/>
+</svelte:head>
+
 <Hero />
 
 <section>

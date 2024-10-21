@@ -4,6 +4,11 @@
 	export let data
 </script>
 
+<svelte:head>
+	<title>{data.post.title} - Acme Website</title>
+	<meta name="description" content="" />
+</svelte:head>
+
 <Title name={data.post.title} />
 
 <section>

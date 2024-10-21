@@ -2,6 +2,10 @@
 	import Title from '../../lib/Title.svelte'
 </script>
 
+<svelte:head>
+	<title>About - Acme Website</title>
+</svelte:head>
+
 <Title name="About" />
 
 <section>

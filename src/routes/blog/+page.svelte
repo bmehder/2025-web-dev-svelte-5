@@ -4,6 +4,10 @@
 	export let data
 </script>
 
+<svelte:head>
+	<title>Blog - Acme Website</title>
+</svelte:head>
+
 <Title name="Blog" />
 
 <section>

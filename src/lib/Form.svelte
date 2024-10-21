@@ -1,7 +1,7 @@
 <form>
 	<div class="flow">
 		<div class="form-group">
-			<label for="first">First Name</label>
+			<label for="first">First Name <span>*</span></label>
 			<input
 				type="first"
 				id="first"
@@ -12,7 +12,7 @@
 		</div>
 
 		<div class="form-group">
-			<label for="last">Last Name</label>
+			<label for="last">Last Name <span>*</span></label>
 			<input
 				type="last"
 				id="last"
@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="form-group">
-			<label for="email">Email</label>
+			<label for="email">Email <span>*</span></label>
 			<input
 				type="email"
 				id="email"
@@ -39,7 +39,7 @@
 		</div>
 
 		<div class="form-group">
-			<label for="message">Message</label>
+			<label for="message">Message <span>*</span></label>
 			<textarea name="message" id="message" rows="10" required></textarea>
 		</div>
 
@@ -54,6 +54,14 @@
 
 	.form-group {
 		display: grid;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	span {
+		color: var(--pink);
 	}
 
 	input,
